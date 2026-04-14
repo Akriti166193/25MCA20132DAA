@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Function: Sabse zyada karz (debt) wale ka index nikalne ke liye
 int getMinIndex(const vector<float>& amount) {
     int minInd = 0;
     for (int i = 1; i < amount.size(); i++)
@@ -15,7 +14,6 @@ int getMinIndex(const vector<float>& amount) {
     return minInd;
 }
 
-// Function: Sabse zyada paise lene wale (creditor) ka index nikalne ke liye
 int getMaxIndex(const vector<float>& amount) {
     int maxInd = 0;
     for (int i = 1; i < amount.size(); i++)
@@ -24,7 +22,7 @@ int getMaxIndex(const vector<float>& amount) {
     return maxInd;
 }
 
-// Main Greedy Logic: Transactions ko settle karne ke liye
+// Main Greedy Logic: 
 void settleCashFlow(vector<float>& amount, const vector<string>& names) {
     int maxDebtor = getMinIndex(amount);
     int maxCreditor = getMaxIndex(amount);
